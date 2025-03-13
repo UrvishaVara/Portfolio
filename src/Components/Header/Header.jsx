@@ -12,7 +12,7 @@ const Header = () => {
             </div>
             {
                 isOpen && (
-                    <ul className='flex items-center justify-between gap-10 py-3 font-medium max-[600px]:grid
+                    <ul className='flex items-center justify-between gap-10 py-3 font-medium  max-[600px]:grid
                      max-[600px]:absolute max-[600px]:top-24 left-0 max-[600px]:justify-center max-[600px]:w-full
                       max-[600px]:bg-slate-100 duration-150 transition-all'>
                         <a href="#" className="rounded-md py-2 font-medium text-white max-[600px]:text-black">Home</a>

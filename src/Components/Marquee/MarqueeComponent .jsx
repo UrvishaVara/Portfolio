@@ -1,17 +1,18 @@
 import React from "react";
 
-const MarqueeComponent = () => {
+const Marquee = () => {
   return (
-    <div className="overflow-hidden whitespace-nowrap bg-gray-900 py-4">
-      <div className="animate-marquee flex space-x-10">
-        <span className="text-gray-400 text-xl">Amazon</span>
-        <span className="text-gray-400 text-xl">Walmart</span>
-        <span className="text-gray-400 text-xl">LinkedIn</span>
-        <span className="text-gray-400 text-xl">Google</span>
-        <span className="text-gray-400 text-xl">Slack</span>
+    <div className="overflow-hidden whitespace-nowrap bg-gray-900 py-3">
+      <div className="flex space-x-10 animate-marquee text-white text-xl font-semibold">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Bootstrap</span>
+        <span>React.js</span>
+        <span>Tailwind CSS</span>
       </div>
     </div>
   );
 };
 
-export default MarqueeComponent;
+export default Marquee;
