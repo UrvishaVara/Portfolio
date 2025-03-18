@@ -1,12 +1,18 @@
 import React from 'react'
 import profile_pic from '../../assets/uvprofile.png'
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import MarqueeComponent from '../Marquee/MarqueeComponent ';
+import Button from '../common/Button/Button';
+import Heading from '../common/Heading/Heading';
+import BgLayout from '../common/BgLayout/BgLayout';
 
 const Home = () => {
 
+  const skills = ['HTML', 'CSS', "JAVASCRIPT", "ReactJS", "BOOTSTRAP", "TAILWIND"]
+
   return (
     <div className='flex justify-between items-start gap-12 text-white p-12 '>
-      <div className='bg-gray-700 min-w-96 bg-opacity-25 p-6 rounded-3xl shadow-md shadow-white/30'>
+      <BgLayout>
         <img className='w-96 h-96 mx-auto rounded-full' src={profile_pic} alt="Urvisha Vara" />
         <div className='flex flex-col gap-4'>
           <div className="text-5xl text-center font-semibold mt-4">Urvisha Vara</div>
@@ -26,14 +32,15 @@ const Home = () => {
             </a>
           </div>
         </div>
-
-      </div>
+      </BgLayout>
       <div className='flex flex-col gap-7'>
-        <div className='bg-gray-700 bg-opacity-25 p-6 rounded-3xl shadow-md shadow-white/30'>
+        <BgLayout>
           <div className='text-gray-400'>Hello There!</div>
           <h2 className='font-normal text-5xl my-5'>
-            I'm a passionate Full-Stack Developer  <br /> with experience in building dynamic and scalable web layout. <br />
+
           </h2>
+          <Heading text=" I'm a passionate Full-Stack Developer with experience in building dynamic and scalable web layout" />
+
           <div className='flex items-center gap-2'>
             <div className='w-3 h-3 rounded-full bg-green-600 p-1'>
             </div>
@@ -41,15 +48,11 @@ const Home = () => {
               Available for Freelancing
             </div>
           </div>
-          <a href="#"><button className='rounded-md bg-orange-800 w-36 border border-x-white p-3 my-5'>Download CV</button></a>
-        </div>
-        <div className='flex gap-8 justify-center items-center bg-gray-700 bg-opacity-25 p-10 min-h-48 rounded-3xl shadow-md shadow-white/30'>
-          <div>HTML</div>
-          <div>CSS</div>
-          <div>BOOTSTRAP</div>
-          <div>JAVASCRIPT</div>
-          <div>REACT JS</div>
-        </div>
+          <a href="#"> <Button buttonName="Download CV" onClick={() => { console.log("VC") }} /> </a>
+        </BgLayout>
+        <BgLayout>
+          <MarqueeComponent classNames="max-w-[944px]" skills={skills} />
+        </BgLayout>
       </div>
     </div>
   )

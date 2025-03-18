@@ -1,18 +1,20 @@
 import React from "react";
+import Marquee from "react-fast-marquee";
 
-const Marquee = () => {
+const MarqueeComponent = ({ skills, classNames }) => {
   return (
-    <div className="overflow-hidden whitespace-nowrap bg-gray-900 py-3">
-      <div className="flex space-x-10 animate-marquee text-white text-xl font-semibold">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Bootstrap</span>
-        <span>React.js</span>
-        <span>Tailwind CSS</span>
-      </div>
+    <div className={`text-2xl font-bold text-white drop-shadow-lg py-3 ${classNames}`}>
+      <Marquee speed={100} pauseOnHover className="!space-x-5">
+        {
+          skills.map((data) => {
+            return (
+              <div key={data}>{data}</div>
+            )
+          })
+        }
+      </Marquee>
     </div>
   );
 };
 
-export default Marquee;
+export default MarqueeComponent;

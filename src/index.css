@@ -3,16 +3,21 @@
 @tailwind utilities;
 
 @keyframes marquee {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(100%);
   }
-  
-  .animate-marquee {
-    display: flex;
-    animation: marquee 10s linear infinite;
+
+  to {
+    transform: translateX(-100%);
   }
-  
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 10s linear infinite;
+}
+
+.rfm-marquee,
+.rfm-initial-child-container {
+  gap: 50px;
+}

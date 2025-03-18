@@ -10,7 +10,7 @@ const App = () => {
     <div>
       <Header />
       <Home />
-      <Marquee></Marquee>
+      
     </div>
   )
 }

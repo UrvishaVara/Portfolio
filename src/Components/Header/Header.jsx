@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../../assets/urvi.svg'
+import Button from '../common/Button/Button'
 
 
 const Header = () => {
@@ -24,7 +25,7 @@ const Header = () => {
                 )
             }
             <button onClick={() => { setIsOpen(!isOpen) }} className='max-[600px]:block hidden  text-white'>MENU</button>
-            <button className='rounded-lg bg-orange-800 w-36 border border-x-white px-2 py-3 my-5'>Connect With Me</button>
+            <Button buttonName="Connect with me" onClick={() => {console.log("header")}} />
 
         </div>
     )
