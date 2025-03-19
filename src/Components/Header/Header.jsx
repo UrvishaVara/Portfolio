@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import logo from '../../assets/urvi.svg'
 import Button from '../common/Button/Button'
 
 
@@ -9,7 +8,7 @@ const Header = () => {
     return (
         <div className='bg-black text-white flex items-center justify-between py-5 px-3'>
             <div>
-                <img src={logo} alt="logo" />
+                <img src='assets/urvi.svg' alt="logo" />
             </div>
             {
                 isOpen && (

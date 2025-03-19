@@ -21,3 +21,8 @@
 .rfm-initial-child-container {
   gap: 50px;
 }
+
+.text-shadow{
+  text-shadow: 2px 2px 4px #6b6969;
+
+}
